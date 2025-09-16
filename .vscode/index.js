@@ -44,14 +44,59 @@ const cart=["Shies","pants","kurta"];
 //     return orderifo(payment)
 // })
 
-function outer(){
+// function outer(){
     
-    function inner(){
-        console.log(a)
+//     function inner(){
+//         console.log(a)
+//     }
+//     let a=10;
+//     return inner;
+// }
+// let a=100;
+// let x=outer();
+// x();
+
+// function counter(){
+//     var count=0;
+//     function increment(){
+//         count++;
+//         console.log(count);
+//     }
+//     return increment;
+// }
+// let counter1=counter();
+// counter1();
+// counter1();
+
+// let counter2=counter();
+// counter2();
+// counter2();
+
+function Counter(){
+    var count=0;
+    this.increment=function (){
+        count++;
+        console.log("Increment",count);
     }
-    let a=10;
-    return inner;
+
+    this.decrement=function (){
+        count--;
+        console.log("Decrement",count)
+    }
 }
-let a=100;
-let x=outer();
-x();
+
+let counter1=new Counter();
+counter1.increment();
+counter1.increment();
+counter1.increment();
+counter1.decrement();
+
+console.log("------------------------------");
+let counter2=new Counter();
+counter2.increment();
+counter2.increment();
+counter2.increment();
+counter2.decrement();
+
+
+
