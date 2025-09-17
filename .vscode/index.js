@@ -72,31 +72,61 @@ const cart=["Shies","pants","kurta"];
 // counter2();
 // counter2();
 
-function Counter(){
-    var count=0;
-    this.increment=function (){
-        count++;
-        console.log("Increment",count);
-    }
+// function Counter(){
+//     var count=0;
+//     this.increment=function (){
+//         count++;
+//         console.log("Increment",count);
+//     }
 
-    this.decrement=function (){
-        count--;
-        console.log("Decrement",count)
-    }
+//     this.decrement=function (){
+//         count--;
+//         console.log("Decrement",count)
+//     }
+// }
+
+// let counter1=new Counter();
+// counter1.increment();
+// counter1.increment();
+// counter1.increment();
+// counter1.decrement();
+
+// console.log("------------------------------");
+// let counter2=new Counter();
+// counter2.increment();
+// counter2.increment();
+// counter2.increment();
+// counter2.decrement();
+
+
+// var b=function a(){
+//     console.log("Hello");
+// }
+// b()()();
+// // b()();
+// a();
+
+
+// first class funtion
+// var gre=function xyz(par){
+//     console.log("Hello my name is Raj");
+//     console.log(par);
+//     par();
+//     // xyz();
+// }
+// gre(function (){
+//     console.log("jwbwhb")
+// });
+
+setTimeout(()=>{
+    console.log("timmer ")
+},5000)
+
+function x(y){
+    console.log("inside X");
+    y();
 }
 
-let counter1=new Counter();
-counter1.increment();
-counter1.increment();
-counter1.increment();
-counter1.decrement();
-
-console.log("------------------------------");
-let counter2=new Counter();
-counter2.increment();
-counter2.increment();
-counter2.increment();
-counter2.decrement();
-
-
-
+x(function y(){
+    console.log("Inside y");
+});
