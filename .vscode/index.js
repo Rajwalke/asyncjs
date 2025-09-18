@@ -118,15 +118,34 @@ const cart=["Shies","pants","kurta"];
 //     console.log("jwbwhb")
 // });
 
-setTimeout(()=>{
-    console.log("timmer ")
-},5000)
+// setTimeo`ut(()=>{
+//     console.log("timmer ")
+// },5000)
 
-function x(y){
-    console.log("inside X");
-    y();
+// function x(y){
+//     console.log("inside X");
+//     y();
+// }
+
+// x(function y(){
+//     console.log("Inside y");
+// });
+
+// document.getElementById('btn').addEventListener('click',function xy(){
+
+//     let count=0;
+//     function clickbtn(){
+//         console.log("click button",);
+//     }
+//     clickbtn();
+// })
+
+
+function clcikAttache(){
+    let count=0;
+    document.getElementById('btn').addEventListener('click',function xyz(){
+        console.log("click on me ",++count);
+        console.log(cart)
+    })
 }
-
-x(function y(){
-    console.log("Inside y");
-});
+clcikAttache();
